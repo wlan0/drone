@@ -124,9 +124,10 @@ var flags = []cli.Flag{
 		Name:   "escalate",
 		Usage:  "images to run in privileged mode",
 		Value: &cli.StringSlice{
-			"plugins/docker",
-			"plugins/gcr",
-			"plugins/ecr",
+			"docker.io/plugins/docker",
+			"docker.io/plugins/gcr",
+			"docker.io/plugins/ecr",
+			"docker.io/library/golang:1.11",
 		},
 	},
 	cli.StringSliceFlag{

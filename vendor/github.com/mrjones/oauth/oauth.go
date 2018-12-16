@@ -56,7 +56,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-	log "github.com/Sirupsen/logrus"
 )
 
 const (
@@ -387,7 +386,7 @@ func (c *Consumer) GetRequestTokenAndUrl(callbackUrl string) (rtoken *RequestTok
 	if callbackUrl != "" {
 		params.Add(CALLBACK_PARAM, callbackUrl)
 	}
-	log.Info(fmt.Sprintf("method: %s url: %s authparams: %s",c.serviceProvider.httpMethod(),c.serviceProvider.RequestTokenUrl, params))
+
 	req := &request{
 		method:      c.serviceProvider.httpMethod(),
 		url:         c.serviceProvider.RequestTokenUrl,
